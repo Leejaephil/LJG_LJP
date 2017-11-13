@@ -8,3 +8,9 @@ void ch_terminal(char *terminal)
 		printf("%d. %s\n", i+1, theater[i]);
 
 	printf("write number of terminal\n");
+
+	while(1)
+	{
+		scanf("%c");
+
+		if((
