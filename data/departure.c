@@ -1,16 +1,28 @@
 #include<stdio.h>
 
-void ch_terminal(char *terminal)
+void ch_terminal(char *terminal,char *ch)
 {
+	int cnt=0;
 	printf("Please choose a departure terminal!\n");
 
 	for (int i=0; i<5; i++)
+		cnt++
 		printf("%d. %s\n", i+1, theater[i]);
 
-	printf("write number of terminal\n");
 
 	while(1)
 	{
-		scanf("%c");
+		printf("write number  of terminal\n");
+		scanf("%c", ch);
 
-		if((
+		if(*ch -gt 5 || *ch -lt 0)
+		{
+			printf("Please write in 1 ~ 5\n");
+		}
+		else
+		{
+			prirntf("You've chosen %s!\n,",terminal[(*ch)-1]);
+			break;
+		}
+	}
+}
