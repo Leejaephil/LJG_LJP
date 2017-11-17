@@ -4,11 +4,11 @@ void ch_terminal(char *terminal,char *ch)
 {
 
 	printf("EsE bus reservation sysyem\n");
-        printf("First category\n");
+        printf("1.First category\n");
 	printf("Please choose a departure terminal!\n");
 
 	for (int i=0; i<5; i++)
-		printf("%d. %s\n", i+1, terminal[i]);
+		printf("%d) %s\n", i+1, terminal[i]);
 
 
 	while(1)
