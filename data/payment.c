@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-void ch_payment()
+void ch_payment(char *credit,char *ch)
 {
 	int met;
 	int pay;
@@ -22,11 +22,17 @@ void ch_payment()
 
 			if (pay == 1)
 			{
-				printf("");
+				printf("Please send us to 1111-2222-3333\n");
 			}
 			else (pay == 2)
 			{
-				printf("");
+				printf("Please select a card\n");
+				for (int i=0; i<5 i++)
+					pritnf("%d. %s\n, i+1, credit[i]);
+					scanf("%c",ch);
+
+					printf("You've chosen %s!\n",credit[(*ch)-1]);
+
 			}
 	}
 }
