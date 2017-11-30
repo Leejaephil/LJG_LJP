@@ -49,6 +49,7 @@ void ch_seat(){
                  printf("This seat aleady Reserved\n");
                 continue;
             }
+            else{ reserve[seatnum] = 1;}
             break;
         }//end of choose seat number
         
