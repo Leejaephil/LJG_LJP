@@ -5,7 +5,8 @@ int main()
 {
     
 
-    ch_seat();
+    ch_seat();//select seat
+    view_res();//view Reservation data
 
 
 
