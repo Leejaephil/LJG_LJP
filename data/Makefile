@@ -11,4 +11,19 @@ arival.o : arival.c
 	gcc %(OPT) -c arival.c -o arival.o
 
 departure.o : departure.c
-	gcc %(OPT) -c departure
+	gcc %(OPT) -c departurec -o departure.o
+
+seat.o : seat.c
+	gcc %(OPT) -c seat.c -o seat.o
+
+time.o : time.c
+	gcc %(OPT) -c time.c -o time.o
+
+view.o : view.c
+	gcc %(OPT) -c view.c -o view.o
+
+payment.o : payment.c
+	gcc %(OPT) -c paymant.c -o payment.o
+
+clean :
+	rn *.o binary 
