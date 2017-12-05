@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void ch_terminal(char *terminal,char *ch_d)
+void ch_terminal(char **terminal,char *ch_d)
 {
 
 	printf("EsE bus reservation sysyem\n");
@@ -8,7 +8,7 @@ void ch_terminal(char *terminal,char *ch_d)
 	printf("Please choose a departure terminal!\n");
 
 	for (int i=0; i<5; i++)
-		printf("%d) %s\n", i+1, *terminal[i]);
+		printf("%d) %s\n", i+1, terminal[i]);
 
 
 	while(1)
