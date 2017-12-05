@@ -1,74 +1,128 @@
 #include <stdio.h>
+#include <string.h>
+#include <time.h>
 
-void ch_date(int *year,int month, int day)
+void ch_date(int *year,int *month, int *day)
 {
 	printf("Please select a date for departure\n");
 	printf("First! please select the starting year.\n");
+
+	int y = 0;
+    	int m = 0;
+	time_t timer;
+	struct tm *t;
 
 	while(1)
 	{
 		scanf("%d", year);
 
-		if(*year -gt 2018 || *year -lt 2017)
+		if(*year > 2018 || *year < 2017)
 		{
 			printf("Please choose in 2017 or 2018\n");
+			continue;
+		}
+		else if(*year < (t->tm_year+1900))
+		{
+			printf("Already passed!\n");
+			printf("Please choose a year again: ");
+			continue;
+		}
+		else if(*year > (tm_year+1900))
+		{
+			y = 1;
+			break;
 		}
 		else
-		{
-		break;
-		}
+			break;
 	}
 
-	printf("You selected %d, please select monthly\n",year);
+	printf("You selected %d, please select monthly\n", *year);
 	
 	while(1)
 	{
 		scanf("%d", month);
 
-		if(*month -gt 12 || *month -lt 1)
+		if(*month > 12 || *month < 1)
 		{
 			printf("Please choose in 1~12\n");
+			continue;
+		}
+		else if(y == 0)
+		{
+			if(*month < (t->tm_mon+1))
+			{
+				printf("Already passed!\n");
+				prinrf("Please choose a month again: \n");
+		                continue;
+			}
+			else if(*month > (t->tm_mon+1))
+			{
+				m = 1;
+				break;
+			}
+			else
+				break;
 		}
 		else
 		{
-		break;
+			m = 1;
+			break;
 		}
+
 	}
 
-	printf("You selected %d, please select day\n",month);
+	printf("You selected %d, please select day\n", *month);
 
 	while(1)
 	{
 		scanf("%d", day);
 
-		if((*month == (1 || 3 || 5 || 7 || 8 || 10 || 12)) && (*day -gt 31 || *day -lt 1))
+		if(*day == 0)
 		{
-			printf("Please choose in 1~31\n");
+			printf("Please type a correct day: ");
+			continue;
 		}
-		else if((*month == (4 || 6 || 9 || 11)) && (*day -gt 30 || *day -lt 1))
+		else if(m_flag == 0)
 		{
-			printf("Please choose in 1~30\n");
+			if(*day < t->tm_mday)
+			{
+				printf("Already passed!\n");
+				printf("Please choose a day again: ");
+				continue;
+			}
 		}
-		else if((*month == 2) && (*day -gt 28 || *day -lt 1))
+
+		if (((*month <= 7 && *month % 2 == 0 || (*month > 7 && *month % 2 == 1)) && *day > 30)
 		{
-			printf("Please choose in 1~28\n");
+			if(*month == 2)
+			{
+				if(*year % 4 == 0)
+				{
+					printf("Please choose in 1-29: ");
+					continue;
+				}
+				else
+				{
+					printf("Please choose in 1-28: ");
+					continue;
+				}
+			}
+				printf("Please choose in 1-30: ");
+				continue;
+		}
+		else if (((*month <= 7 && *month % 2 == 1) || (*month > 7 && *month %2 = 0)) && *day
+		{
+			printf("Please choose in 1-31: ");
+			continue;
 		}
 		else
-		{
-		break;
-		}
+			break;
 	}
-		char ans;
-		printf("Is the date of your choosing on %d/%d/%d? Y/N \n",*year,*month,*day);
-		scanf("%s",ans);
+	
+	printf("\n You've chosen %d.%d.%d!\n",*year, *month, *day);
 
-		if(ans == Y)
-		{
-			printf("Completed\n");
-		}
-		else(ans == N)
-		{
-			printf("Please try again\n");
-		}
 
-}
+
+
+
+

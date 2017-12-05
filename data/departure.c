@@ -20,7 +20,7 @@ void ch_terminal(char **terminal,char *ch_d)
 		{
 			printf("Please write in 1 ~ 5\n");
 			printf("Let me explain once more\n");
-				for (i=0; i<5; i++)
+				for (int i=0; i<5; i++)
 					printf("%d. %s\n", i+1, terminal[i]);
 			continue;
 		}
