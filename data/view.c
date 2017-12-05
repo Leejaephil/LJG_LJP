@@ -14,9 +14,8 @@ void view_res()
     }
     else
     {
-        system("clear");
         printf("Your Reservation List : \n");
-        while((ch = fget(fp)) != EOF)
+        while((ch = fgetc(fp)) != EOF)
         printf("%c",ch);
     }
 
