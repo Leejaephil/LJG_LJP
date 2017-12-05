@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void ch_terminal(char **terminal,char *ch_d)
+void ch_terminal(char **terminal,int *ch_d)
 {
 
 	printf("EsE bus reservation sysyem\n");
