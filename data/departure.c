@@ -8,7 +8,7 @@ void ch_terminal(char **terminal,char *ch_d)
 	printf("Please choose a departure terminal!\n");
 
 	for (int i=0; i<5; i++)
-		printf("%d) %s\n", i+1, terminal[i]);
+		printf("%d. %s\n", i+1, terminal[i]);
 
 
 	while(1)
@@ -16,7 +16,7 @@ void ch_terminal(char **terminal,char *ch_d)
 		printf("write number  of terminal\n");
 		scanf("%d", ch_d);
 
-		if(*ch > 5 || *ch < 0)
+		if(*ch_d > 5 || *ch_d < 0)
 		{
 			printf("Please write in 1 ~ 5\n");
 			printf("Let me explain once more\n");
