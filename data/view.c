@@ -6,7 +6,7 @@ void view_res()
     char ch;
     FILE *fp;
     
-    fp = fopen("reserved.txt","r");
+    fp = fopen("reserve.txt","r");
 
     if(fp == NULL)
     {
