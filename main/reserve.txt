@@ -1,0 +1,3 @@
+Name/departure/arival/seat
+LEE Inchoen Yongin 23
+Phil Dongseoul Gimpo_Airport 3
