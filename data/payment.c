@@ -33,8 +33,3 @@ void ch_payment()
 	}
 }
 
-int main(void)
-{
-	ch_payment();
-	return 0;
-}
