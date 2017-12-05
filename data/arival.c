@@ -1,9 +1,9 @@
 #include<stdio.h>
 
-void ch_terminal(char *terminal,char *ch)
+void ch_arival(char *terminal,char *ch)
 {
 
-	printf("EsE bus reservation sysyem\n");
+	printf("ESE bus reservation sysyem\n");
         printf("First category\n");
 	printf("Please choose a arival terminal!\n");
 
