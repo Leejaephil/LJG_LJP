@@ -12,6 +12,9 @@ void ch_date(int *year,int *month, int *day)
 	time_t timer;
 	struct tm *t;
 
+	timer = time(NULL);
+	t = localtime(&timer);
+
 	while(1)
 	{
 		scanf("%d", year);
@@ -27,7 +30,7 @@ void ch_date(int *year,int *month, int *day)
 			printf("Please choose a year again: ");
 			continue;
 		}
-		else if(*year > (tm_year+1900))
+		else if(*year > (t->tm_year+1900))
 		{
 			y = 1;
 			break;
@@ -52,7 +55,7 @@ void ch_date(int *year,int *month, int *day)
 			if(*month < (t->tm_mon+1))
 			{
 				printf("Already passed!\n");
-				prinrf("Please choose a month again: \n");
+				printf("Please choose a month again: \n");
 		                continue;
 			}
 			else if(*month > (t->tm_mon+1))
@@ -82,7 +85,7 @@ void ch_date(int *year,int *month, int *day)
 			printf("Please type a correct day: ");
 			continue;
 		}
-		else if(m_flag == 0)
+		else if(m == 0)
 		{
 			if(*day < t->tm_mday)
 			{
@@ -92,7 +95,7 @@ void ch_date(int *year,int *month, int *day)
 			}
 		}
 
-		if (((*month <= 7 && *month % 2 == 0 || (*month > 7 && *month % 2 == 1)) && *day > 30)
+		if (((*month <= 7 && *month % 2 == 0) || (*month > 7 && *month % 2 == 1)) && *day > 30)
 		{
 			if(*month == 2)
 			{
@@ -110,7 +113,7 @@ void ch_date(int *year,int *month, int *day)
 				printf("Please choose in 1-30: ");
 				continue;
 		}
-		else if (((*month <= 7 && *month % 2 == 1) || (*month > 7 && *month %2 = 0)) && *day
+		else if (((*month <= 7 && *month % 2 == 1) || (*month > 7 && *month %2 == 0)) && *day > 31)
 		{
 			printf("Please choose in 1-31: ");
 			continue;
@@ -120,7 +123,7 @@ void ch_date(int *year,int *month, int *day)
 	}
 	
 	printf("\n You've chosen %d.%d.%d!\n",*year, *month, *day);
-
+}
 
 
 

@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-void ch_time(char *time, char *ch_t)
+void ch_time(char **time_table, int *ch_t)
 {
 	printf("Please select the starting time\n");
 
 	for(int i=0; i<11; i++){
-		printf("%d. %s\n", i+1, *time[i]);
+		printf("%d. %s\n", i+1, time_table[i]);
 	}
 
 	while(1){
@@ -18,7 +18,8 @@ void ch_time(char *time, char *ch_t)
                 }
 		else
 		{
-			printf("You've chosen %s!\n", time[(*ch_t)-1]);
+			printf("You've chosen %s!\n", time_table[(*ch_t)-1]);
 			break;
 		}
+	}
 }
